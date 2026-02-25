@@ -1,19 +1,25 @@
 # PruebasUnitarias
 
+# Descripción:
+
+Este proyecto implementa un módulo de evaluación académica que permite calcular el estado y la categoría de un estudiante a partir de su nota final y el número de faltas.
+
+El sistema valida datos de entrada, aplica reglas de negocio y clasifica el resultado académico de forma automática, siguiendo principios de desarrollo guiado por pruebas (TDD).
+
 
 # Reglas:
 
-Nota entre 0 y 100
+La nota debe estar entre 0 y 100
 
-Aprobado si nota ≥ 60
+El estudiante aprueba si la nota es ≥ 60
 
-Sobresaliente si nota ≥ 90
+El estudiante es sobresaliente si la nota es ≥ 90
 
-Descuento de puntos por faltas (>3 faltas → -5 puntos)
+Si tiene más de 3 faltas, se aplica un descuento automático de 5 puntos
 
 No se permiten valores inválidos
 
-No se permiten tipos incorrectos
+No se permiten tipos de datos incorrectos
 
 
 # Ejecución:

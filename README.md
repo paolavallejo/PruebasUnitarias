@@ -25,6 +25,7 @@ No se permiten tipos de datos incorrectos
 # Ejecución:
 
 pip install pytest
+
 pytest
 
 

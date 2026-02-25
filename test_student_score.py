@@ -85,3 +85,19 @@ def test_sobresaliente():
 
 def test_aprobado():
     assert evaluar_estudiante(70, 1) == "APROBADO"
+
+
+# ==================================================
+# ASSERTS EXPLÍCITOS (USO PEDAGÓGICO DIRECTO)
+# ==================================================
+def test_assert_simple():
+    resultado = evaluar_estudiante(70, 0)
+    assert resultado == "APROBADO"
+
+def test_assert_con_mensaje():
+    resultado = evaluar_estudiante(90, 0)
+    assert resultado == "SOBRESALIENTE", "Error en clasificación de sobresaliente"
+
+def test_assert_de_tipo():
+    resultado = evaluar_estudiante(85, 0)
+    assert isinstance(resultado, str), "El resultado debe ser un string"

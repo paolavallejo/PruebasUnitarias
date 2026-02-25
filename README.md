@@ -41,3 +41,7 @@ pytest
 3. Agregar pruebas primero (TDD)
 
 4. Introducir refactor con pruebas vivas
+
+5. Agregar mensaje a las pruebas (assert con mensaje)
+
+6. Agregar una prueba que verifique el tipo de una variable

@@ -1,5 +1,5 @@
 import pytest
-from student_score import evaluar_estudiante
+from student_score2 import evaluar_estudiante
 
 # =========================
 # 1. Pruebas normales

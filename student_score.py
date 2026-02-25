@@ -16,13 +16,20 @@ def evaluar_estudiante(nota, faltas):
     if faltas < 0:
         raise ValueError("Faltas inválidas")
 
+    # ===== Regla crítica =====
+    if faltas > 10:
+        return "REPROBADO"
+
     # regla de negocio
     if faltas > 3:
         nota = nota - 5
 
+    # ===== Clasificación =====
     if nota < 60:
         return "REPROBADO"
-    elif nota < 90:
+    elif nota < 85:
         return "APROBADO"
+    elif nota < 90:
+        return "EXCELENTE"
     else:
         return "SOBRESALIENTE"

@@ -60,3 +60,28 @@ def test_tipo_invalido_nota():
 def test_tipo_invalido_faltas():
     with pytest.raises(TypeError):
         evaluar_estudiante(90, "dos")
+
+# =========================
+# NUEVA CATEGORÍA
+# =========================
+def test_categoria_excelente_minimo():
+    assert evaluar_estudiante(85, 0) == "EXCELENTE"
+
+def test_categoria_excelente_maximo():
+    assert evaluar_estudiante(89, 0) == "EXCELENTE"
+
+# =========================
+# INASISTENCIA GRAVE
+# =========================
+def test_inasistencia_grave_reprobado():
+    # aunque tenga buena nota → reprobado automático
+    assert evaluar_estudiante(95, 11) == "REPROBADO"
+
+# =========================
+# REGRESIÓN (pruebas existentes siguen válidas)
+# =========================
+def test_sobresaliente():
+    assert evaluar_estudiante(90, 0) == "SOBRESALIENTE"
+
+def test_aprobado():
+    assert evaluar_estudiante(70, 1) == "APROBADO"
